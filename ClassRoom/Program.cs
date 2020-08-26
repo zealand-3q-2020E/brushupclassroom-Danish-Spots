@@ -10,7 +10,8 @@ namespace ClassRoom
     {
         static void Main(string[] args)
         {
-
+            ClassRoom programming = new ClassRoom() { ClassName = "3Q Beginning of the semester", SemesterStart = new DateTime(2020, 8, 24), 
+                ClassList = new List<Student>() { new Student("Justin", 12, 31), new Student("Andreas", 2, 7), new Student("Dominik", 11, 9) } };
         }
     }
 }
