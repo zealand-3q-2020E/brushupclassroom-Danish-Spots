@@ -19,6 +19,8 @@ namespace ClassRoom
             {
                 Console.WriteLine(student.Name);
             }
+            Console.WriteLine();
+            programming.GetAllStudentsBirthSeason();
             Console.WriteLine("Press any key to close");
             Console.ReadKey();
         }
