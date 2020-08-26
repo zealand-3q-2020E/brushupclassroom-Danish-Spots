@@ -9,6 +9,7 @@ namespace ClassRoom
 {
     public class Student
     {
+        private int _birthMonth;
         public Student(string name, int birthMonth, int birthday)
         {
             Name = name;
@@ -17,7 +18,16 @@ namespace ClassRoom
         }
 
         public string Name { get; private set; }
-        public int BirthMonth { get; private set; }
+        public int BirthMonth { 
+            get { return _birthMonth; }
+            private set {
+                if (value < 12 && value > 1)
+                    _birthMonth = value;
+                else
+                    throw new ArgumentOutOfRangeException();
+
+            }
+        }
         public int Birthday { get; private set; }
 
         public string GetSeasonStudentBirthDay()
