@@ -1,3 +1,4 @@
+using System;
 using ClassRoom;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -26,6 +27,15 @@ namespace Tests
 
             //Assert
             Assert.AreEqual(monthName, seasonName1, seasonName2, seasonName3);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        [DataRow(0)]
+        [DataRow(13)]
+        public void CheckBirthDate(int birthMonth)
+        {
+            Student s = new Student("somebody", birthMonth, 1);
         }
     }
 }
